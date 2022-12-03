@@ -3,16 +3,17 @@ import {Transform, pipeline} from 'stream'
 
 const transform = async () => {
     const reverse = new Transform({
-        transform(chunk, encoding, callback) {
-            this.push(chunk.toString().trim().split('').reverse().join('') + '\n');
-            callback();
+        transform(chunk, _encoding, callback) {
+            callback(null, chunk.toString().trim().split('').reverse().join('') + '\n');
         }
     });
     pipeline(
         stdin,
         reverse,
         stdout,
-        err => {throw err}
+        err => {
+            if (err) throw err;
+        }
     )
 };
 

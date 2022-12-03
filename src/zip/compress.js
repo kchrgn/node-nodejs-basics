@@ -1,10 +1,17 @@
 import { createReadStream, createWriteStream } from 'fs'
+import { access } from 'fs/promises';
 import { createGzip } from 'zlib'
 import { pipeline } from 'stream';
 
 const compress = async () => {
     const srcFile = new URL('./files/fileToCompress.txt', import.meta.url);
     const archFile = new URL('./files/archive.gz', import.meta.url);
+
+    try {
+        await access(srcFile);
+    } catch (err) {
+        throw err;
+    }
 
     pipeline (
         createReadStream(srcFile),

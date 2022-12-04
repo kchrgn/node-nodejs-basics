@@ -1,5 +1,5 @@
 import {stdin, stdout} from 'process'
-import {Transform, pipeline} from 'stream'
+import { Transform, pipeline } from 'stream'
 
 const transform = async () => {
     const reverse = new Transform({

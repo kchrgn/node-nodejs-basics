@@ -19,9 +19,9 @@ const performCalculations = async () => {
     workersPool.then(results => {
         const formattedResults = results.map((res) => {
             if (res.status === 'fulfilled') {
-                return {status: 'resolved', data: res.value}
+                return {status: 'resolved', data: res.value};
             } else {
-                return {status: 'error', data: null}
+                return {status: 'error', data: null};
             }
         });
         console.log(formattedResults);

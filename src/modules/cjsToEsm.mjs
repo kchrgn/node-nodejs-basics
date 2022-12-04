@@ -1,9 +1,9 @@
 import * as path from 'path'
 import { release, version } from 'os'
-import {createServer as createServerHttp} from 'http'
+import { createServer as createServerHttp } from 'http'
 import './files/c.js'
-import {fileURLToPath} from 'url'
-import { createRequire } from 'module';
+import { fileURLToPath } from 'url'
+import { createRequire } from 'module'
 
 const random = Math.random();
 

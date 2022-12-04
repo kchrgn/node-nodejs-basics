@@ -1,7 +1,7 @@
 import { createReadStream, createWriteStream } from 'fs'
-import { access } from 'fs/promises';
+import { access } from 'fs/promises'
 import { createGunzip } from 'zlib'
-import { pipeline } from 'stream';
+import { pipeline } from 'stream'
 
 const decompress = async () => {
     const archFile = new URL('./files/archive.gz', import.meta.url);

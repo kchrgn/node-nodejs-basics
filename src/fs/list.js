@@ -1,4 +1,4 @@
-import {readdir} from 'fs/promises'
+import { readdir } from 'fs/promises'
 
 const list = async () => {
     const filesFolderPath = new URL('./files', import.meta.url);
@@ -7,7 +7,7 @@ const list = async () => {
         const fileNameList = await readdir(filesFolderPath);
         console.log (fileNameList);
     } catch (err) {
-        throw new Error('FS operation failed')
+        throw new Error('FS operation failed');
     }
 };
 

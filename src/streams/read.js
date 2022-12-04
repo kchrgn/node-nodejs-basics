@@ -1,4 +1,4 @@
-import {createReadStream} from 'fs'
+import { createReadStream } from 'fs'
 import { stdout } from 'process'
 
 const read = async () => {

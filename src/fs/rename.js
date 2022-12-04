@@ -1,8 +1,8 @@
-import {rename as renameFile, access} from 'fs/promises'
+import { rename as renameFile, access } from 'fs/promises'
 
 const rename = async () => {
-    const oldFileName = new URL('./files/wrongFilename.txt', import.meta.url)
-    const newFileName = new URL('./files/properFilename.md', import.meta.url)
+    const oldFileName = new URL('./files/wrongFilename.txt', import.meta.url);
+    const newFileName = new URL('./files/properFilename.md', import.meta.url);
 
     let newFileIsExist = false;
 

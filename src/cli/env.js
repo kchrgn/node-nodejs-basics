@@ -3,10 +3,10 @@ const parseEnv = () => {
     for (let evar in process.env) {
         if (evar.substring(0,4) === 'RSS_') {
             if (res) res += '; ';
-            res += evar + '=' + process.env[evar]
+            res += evar + '=' + process.env[evar];
         }  
     }
-    console.log(res)
+    console.log(res);
 };
 
 parseEnv();
